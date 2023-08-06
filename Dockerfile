@@ -11,4 +11,4 @@ RUN pip install -r /app/requirements.txt
 ADD mkdocs.yml /app/mkdocs.yml
 ADD favicon.ico /app/favicon.ico
 
-ENTRYPOINT [ "bin/entrypoint.sh" ]
+ENTRYPOINT [ "/app/bin/entrypoint.sh" ]
