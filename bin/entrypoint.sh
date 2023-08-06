@@ -1,4 +1,4 @@
 #!/bin/sh
 
-ls -la
+cp /app/mkdocs.yml .
 mkdocs build --clean
