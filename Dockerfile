@@ -1,7 +1,7 @@
 FROM alpine:3.16
 
-COPY bin ${GITHUB_WORKSPACE}
-RUN chmod +x bin/entrypoint.sh
+COPY bin ${GITHUB_WORKSPACE}/bin
+RUN chmod +x ${GITHUB_WORKSPACE}/bin/entrypoint.sh
 
 ADD requirements.txt ${GITHUB_WORKSPACE}/requirements.txt
 
