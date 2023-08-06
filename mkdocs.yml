@@ -3,7 +3,7 @@ site_author: jmoney
 site_description: ""
 site_keyword: "jmoney, jonathan monette, engineer"
 site_favicon: favicon.ico
-docs_dir: /docs
+docs_dir: docs
 
 plugins:
   - search
@@ -12,10 +12,10 @@ plugins:
 
 nav:
   - Home: https://www.jmoney.dev/
-  - Blogs: https://www.jmoney.dev/blogs
-  - Cloud: https://www.jmoney.dev/cloud
-  - Homebrew: https://www.jmoney.dev/homebrew
-  - TIL: 'https://www.jmoney.dev/til'
+  - Blogs: https://www.jmoney.dev/blogs/
+  - Cloud: https://www.jmoney.dev/cloud/
+  - Homebrew: https://www.jmoney.dev/homebrew/
+  - TIL: 'https://www.jmoney.dev/til/'
   - Resume: 'https://github.com/jmoney/resume/releases/download/latest/JonathanMonette_resume.pdf'
 
 theme:
