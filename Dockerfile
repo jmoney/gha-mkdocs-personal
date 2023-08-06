@@ -1,7 +1,7 @@
 FROM alpine:3.16
 
-COPY bin ${GITHUB_WORKSPACE}/bin
-RUN chmod +x ${GITHUB_WORKSPACE}/bin/entrypoint.sh
+COPY bin ${GITHUB_WORKSPACE}
+RUN chmod +x bin/entrypoint.sh
 
 ADD requirements.txt ${GITHUB_WORKSPACE}/requirements.txt
 
@@ -11,4 +11,4 @@ RUN pip install -r ${GITHUB_WORKSPACE}/requirements.txt
 ADD mkdocs.yml ${GITHUB_WORKSPACE}/mkdocs.yml
 ADD favicon.ico ${GITHUB_WORKSPACE}/favicon.ico
 
-ENTRYPOINT [ "${GITHUB_WORKSPACE}/bin/entrypoint.sh" ]
+ENTRYPOINT [ "entrypoint.sh" ]
