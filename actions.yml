@@ -1,0 +1,5 @@
+name: 'gha-mkdocs-personal'
+description: 'Personal action for building mkdocs documentation for publishing'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
