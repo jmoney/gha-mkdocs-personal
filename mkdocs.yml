@@ -3,7 +3,7 @@ site_author: jmoney
 site_description: ""
 site_keyword: "jmoney, jonathan monette, engineer"
 site_favicon: favicon.ico
-docs_dir: docs
+docs_dir: /docs
 
 plugins:
   - search
