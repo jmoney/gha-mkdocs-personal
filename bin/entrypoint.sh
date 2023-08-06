@@ -1,3 +1,3 @@
 #!/bin/sh
 
-mkdocs build --clean
+mkdocs build --clean --config-file /app/mkdocs.yml
