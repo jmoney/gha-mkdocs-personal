@@ -1,14 +1,14 @@
 FROM alpine:3.16
 
-COPY bin bin
-RUN chmod +x bin/entrypoint.sh
+COPY bin /app/bin
+RUN chmod +x /app/bin/entrypoint.sh
 
-ADD requirements.txt requirements.txt
+ADD requirements.txt /app/requirements.txt
 
 RUN apk add --no-cache python3 py3-pip
-RUN pip install -r requirements.txt
+RUN pip install -r /app/requirements.txt
 
-ADD mkdocs.yml mkdocs.yml
-ADD favicon.ico favicon.ico
+ADD mkdocs.yml /app/mkdocs.yml
+ADD favicon.ico /app/favicon.ico
 
 ENTRYPOINT [ "bin/entrypoint.sh" ]
