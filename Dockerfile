@@ -11,4 +11,4 @@ RUN pip install -r ${GITHUB_WORKSPACE}/requirements.txt
 ADD mkdocs.yml ${GITHUB_WORKSPACE}/mkdocs.yml
 ADD favicon.ico ${GITHUB_WORKSPACE}/favicon.ico
 
-ENTRYPOINT [ "/app/bin/entrypoint.sh" ]
+ENTRYPOINT [ "${GITHUB_WORKSPACE}/bin/entrypoint.sh" ]
