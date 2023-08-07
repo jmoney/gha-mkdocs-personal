@@ -26,7 +26,7 @@ jobs:
     needs: find_repos
     strategy:
       matrix:
-        repo: ${{ needs.find_repos.outputs.github_site_mkdocs }}
+        repo: ${{ fromJSON(needs.find_repos.outputs.github_site_mkdocs) }}
     runs-on: ubuntu-latest
     steps:
     #   - name: Debug output
