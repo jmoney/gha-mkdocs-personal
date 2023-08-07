@@ -16,7 +16,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Find Repos to trigger
         id: repos
-        run: echo "github_site_mkdocs=$(python find_repos.py)" >> GITHUB_OUTPUT
+        run: echo "github_site_mkdocs=$(python find_repos.py)" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -27,6 +27,8 @@ jobs:
         repo: ${{ needs.find_repos.outputs.github_site_mkdocs }}
     runs-on: ubuntu-latest
     steps:
+    #   - name: Debug output
+    #     run: cat GITHUB_OUTPUT
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
