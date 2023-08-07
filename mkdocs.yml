@@ -2,7 +2,6 @@ site_name: Jonathan Monette | Personal Site
 site_author: jmoney
 site_description: ""
 site_keyword: "jmoney, jonathan monette, engineer"
-site_favicon: favicon.ico
 docs_dir: docs
 
 plugins:
