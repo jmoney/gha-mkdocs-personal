@@ -20,7 +20,7 @@ jobs:
         id: repos
         run: echo "github_site_mkdocs=$(python find_repos.py)" >> $GITHUB_OUTPUT
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
   dispatch:
     needs: find_repos
@@ -32,7 +32,7 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
           repository: ${{ matrix.repo }}
           event-type: deploy
       
