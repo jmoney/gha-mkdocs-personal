@@ -1,0 +1,34 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  find_repos:
+    runs-on: ubuntu-latest
+    outputs:
+      github_site_mkdocs: ${{ steps.repos.outputs.github_site_mkdocs }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Requirements
+        run: pip install -r requirements.txt
+      - name: Find Repos to trigger
+        id: repos
+        run: echo "github_site_mkdocs=$(python find_repos.py)" >> GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dispatch:
+    needs: find_repos
+    strategy:
+      matrix:
+        repo: ${{ needs.find_repos.outputs.github_site_mkdocs }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ matrix.repo }}
+          event-type: update
+      
