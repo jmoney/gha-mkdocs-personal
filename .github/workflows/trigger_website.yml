@@ -1,3 +1,5 @@
+name: Trigger Site Build
+
 on:
   push:
     branches:
