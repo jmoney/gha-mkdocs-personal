@@ -29,12 +29,10 @@ jobs:
         repo: ${{ fromJSON(needs.find_repos.outputs.github_site_mkdocs) }}
     runs-on: ubuntu-latest
     steps:
-    #   - name: Debug output
-    #     run: cat GITHUB_OUTPUT
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ matrix.repo }}
-          event-type: update
+          event-type: deploy
       
