@@ -18,6 +18,24 @@ nav:
   - Resume: 'https://github.com/jmoney/resume/releases/download/latest/JonathanMonette_resume.pdf'
 
 theme:
-  name: github
-  highlightjs: true
-  hljs_style: github
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+  favicon: img/favicon.ico
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+hooks:
+  - inject_git_repo.py
+
+# Determine how to dynamically generate the repo config, possibly with hooks injecting this at runtime.  The code for the hook would live here.
+# repo_name:
+# repo_url:
+# theme:
+#  icon:
+    # repo: simple/github
