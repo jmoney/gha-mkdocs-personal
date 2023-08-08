@@ -9,6 +9,8 @@ plugins:
   - macros
   - include-markdown
 
+# TODO - Fix navigation.  Right now the navigation is being overwritten by the below.  Ideally, the below is just part of the header and the navigation is discovered as normal.
+# look into overwriting the partials that power the navigation to allow for this.
 nav:
   - Home: https://www.jmoney.dev/
   - Blogs: https://www.jmoney.dev/blogs/
@@ -17,7 +19,6 @@ nav:
   - TIL: 'https://www.jmoney.dev/til/'
   - Resume: 'https://github.com/jmoney/resume/releases/download/latest/JonathanMonette_resume.pdf'
 
-# TODO - Fix table of contents.  When using the include-markdown plugin, the TOC is not generated.
 theme:
   name: material
   palette:
