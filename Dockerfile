@@ -10,6 +10,7 @@ RUN pip install -r /app/requirements.txt
 
 ADD mkdocs.yml /app/mkdocs.yml
 ADD favicon.ico /app/favicon.ico
-ADD inject_git_repo.py /app/inject_git_repo.py
+
+COPY hooks /app/hooks
 
 ENTRYPOINT [ "/app/bin/entrypoint.sh" ]

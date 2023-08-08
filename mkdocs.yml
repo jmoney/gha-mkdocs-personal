@@ -31,7 +31,7 @@ theme:
     - navigation.sections
     - navigation.top
 hooks:
-  - inject_git_repo.py
+  - hooks/config/inject_git_repo.py
 
 # Determine how to dynamically generate the repo config, possibly with hooks injecting this at runtime.  The code for the hook would live here.
 # repo_name:
