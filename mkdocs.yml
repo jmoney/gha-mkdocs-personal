@@ -28,6 +28,7 @@ theme:
     repo: fontawesome/brands/github
 hooks:
   - hooks/config/inject_git_repo.py
+  - hooks/template_context/inject_tabs.py
 
 extra:
   social:

@@ -1,24 +1,13 @@
-<nav class="md-tabs" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
+{#-
+    This file was automatically generated - do not edit
+  -#}
+  {% set class = "" %}
+  <nav class="md-tabs" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
     <div class="md-grid">
       <ul class="md-tabs__list">
-        <li class="md-tabs__item">
-            <a href="https://jmoney.dev" class="md-tabs__link">Home</a>
-        </li>
-        <li class="md-tabs__item"s>
-            <a href="https://jmoney.dev/blogs" class="md-tabs__link">Blogs</a>
-        </li>
-        <li class="md-tabs__item">
-            <a href="https://jmoney.dev/cloud" class="md-tabs__link">Cloud</a>
-        </li>
-        <li class="md-tabs__item">
-            <a href="https://jmoney.dev/homebrew" class="md-tabs__link">Homebrew</a>
-        </li>
-        <li class="md-tabs__item">
-            <a href="https://jmoney.dev/til" class="md-tabs__link">TIL</a>
-        </li>
-        <li class="md-tabs__item">
-            <a href="https://github.com/jmoney/resume/releases/download/latest/JonathanMonette_resume.pdf" class="md-tabs__link">Resume</a>
-        </li>
+        {% for tab_item in tabs %}
+          {% include "partials/tabs-item.html" %}
+        {% endfor %}
       </ul>
     </div>
   </nav>
