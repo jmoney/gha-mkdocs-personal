@@ -36,3 +36,13 @@ theme:
     repo: fontawesome/brands/github
 hooks:
   - hooks/config/inject_git_repo.py
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jmoney/
+      name: Jmoney on Github
+
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jmoney9001/
+      name: Jmoney on LinkedIn
