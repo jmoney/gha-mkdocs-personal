@@ -30,6 +30,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
+    - toc.follow
   icon:
     repo: fontawesome/brands/github
 hooks:
