@@ -6,6 +6,6 @@ cp /app/mkdocs.yml .
 cp /app/favicon.ico ./docs/img
 cp --recursive /app/hooks .
 
-[ -f ./docs/license.md ] || cp LICESNE ./docs/license.md
+cp LICESNE ./docs/license.md
 
 mkdocs build --clean
