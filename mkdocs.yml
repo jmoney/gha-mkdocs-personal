@@ -17,6 +17,7 @@ nav:
   - TIL: 'https://www.jmoney.dev/til/'
   - Resume: 'https://github.com/jmoney/resume/releases/download/latest/JonathanMonette_resume.pdf'
 
+# TODO - Fix table of contents.  When using the include-markdown plugin, the TOC is not generated.
 theme:
   name: material
   palette:
@@ -35,10 +36,3 @@ theme:
     repo: fontawesome/brands/github
 hooks:
   - hooks/config/inject_git_repo.py
-
-# Determine how to dynamically generate the repo config, possibly with hooks injecting this at runtime.  The code for the hook would live here.
-# repo_name:
-# repo_url:
-# theme:
-#  icon:
-    # repo: simple/github
