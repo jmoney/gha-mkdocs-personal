@@ -8,5 +8,4 @@ GITHUB_REPOSITORY = os.environ.get('GITHUB_REPOSITORY')
 def on_config(config, **kwargs):
     config['repo_name'] = GITHUB_REPOSITORY
     config['repo_url'] = f"https://gitbug.com/{GITHUB_REPOSITORY}"
-    config['theme'].icon.repo = "simple/github"
     return config

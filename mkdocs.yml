@@ -30,6 +30,8 @@ theme:
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
+  icon:
+    repo: fontawesome/brands/github
 hooks:
   - hooks/config/inject_git_repo.py
 
