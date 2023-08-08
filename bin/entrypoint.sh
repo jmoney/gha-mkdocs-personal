@@ -5,6 +5,7 @@ mkdir -p ./docs/img
 cp /app/mkdocs.yml .
 cp /app/favicon.ico ./docs/img
 cp --recursive /app/hooks .
+cp --recursive /app/overrides .
 
 cp LICESNE ./docs/license.md
 

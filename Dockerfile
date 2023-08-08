@@ -12,5 +12,6 @@ ADD mkdocs.yml /app/mkdocs.yml
 ADD favicon.ico /app/favicon.ico
 
 COPY hooks /app/hooks
+COPY overrides /app/overrides
 
 ENTRYPOINT [ "/app/bin/entrypoint.sh" ]
