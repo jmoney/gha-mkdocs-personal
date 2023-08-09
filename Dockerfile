@@ -10,6 +10,7 @@ RUN pip install -r /app/requirements.txt
 
 ADD mkdocs.yml /app/mkdocs.yml
 ADD favicon.ico /app/favicon.ico
+ADD index.md /app/index.md
 
 COPY hooks /app/hooks
 COPY overrides /app/overrides
