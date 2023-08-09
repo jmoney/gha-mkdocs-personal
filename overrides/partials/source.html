@@ -21,27 +21,31 @@
 -->
 
 <div>
-<!-- Repository information -->
-<a
-  href="{{ config.repo_url }}"
-  title="{{ lang.t('source') }}"
-  class="md-source"
-  data-md-component="source"
->
-  <div class="md-source__icon md-icon">
-    {% set icon = config.theme.icon.repo or "fontawesome/brands/git-alt" %}
-    {% include ".icons/" ~ icon ~ ".svg" %}
-  </div>
-  <div class="md-source__repository">
-    {{ config.repo_name }}
-  </div>
-</a>
-<a
-  href="https://jmoney.dev/{{ config.repo_name.split("/")[1] }}/license"
-  title="{{ lang.t('source') }}"
-  class="md-source"
-  data-md-component="source"
->
-    <img alt="GitHub" class="md-source__repository" src="https://flat.badgen.net/github/license/{{config.repo_name}}">
-</a>
+    <div>
+      <!-- Repository information -->
+      <a
+        href="{{ config.repo_url }}"
+        title="{{ lang.t('source') }}"
+        class="md-source"
+        data-md-component="source"
+      >
+        <div class="md-source__icon md-icon">
+          {% set icon = config.theme.icon.repo or "fontawesome/brands/git-alt" %}
+          {% include ".icons/" ~ icon ~ ".svg" %}
+        </div>
+        <div class="md-source__repository">
+          {{ config.repo_name }}
+        </div>
+      </a>
+    </div>
+    <div>
+      <a
+        href="https://jmoney.dev/{{ config.repo_name.split("/")[1] }}/license"
+        title="{{ lang.t('source') }}"
+        class="md-source"
+        data-md-component="source"
+      >
+          <img alt="GitHub" class="md-source__repository" src="https://flat.badgen.net/github/license/{{config.repo_name}}">
+      </a>
+    </div>
 </div>
