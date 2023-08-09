@@ -20,14 +20,6 @@
   IN THE SOFTWARE.
 -->
 
-<a
-  href="https://jmoney.dev/{{ config.repo }}/license.md"
-  title="{{ lang.t('source') }}"
-  class="md-source"
-  data-md-component="source"
->
-    <img alt="GitHub" src="https://flat.badgen.net/github/license/{{config.repo_name}}">
-</a>
 <!-- Repository information -->
 <a
   href="{{ config.repo_url }}"
@@ -42,4 +34,12 @@
   <div class="md-source__repository">
     {{ config.repo_name }}
   </div>
+</a>
+<a
+  href="https://jmoney.dev/{{ config.repo }}/license.md"
+  title="{{ lang.t('source') }}"
+  class="md-source"
+  data-md-component="source"
+>
+    <img alt="GitHub" class="md-source__icon md-icon" src="https://flat.badgen.net/github/license/{{config.repo_name}}">
 </a>
