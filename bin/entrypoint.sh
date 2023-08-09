@@ -7,6 +7,6 @@ cp /app/favicon.ico ./docs/img
 cp --recursive /app/hooks .
 cp --recursive /app/overrides .
 
-cp LICESNE ./docs/license.md
+cp LICENSE ./docs/license.md
 
 mkdocs build --clean
